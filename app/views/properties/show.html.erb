@@ -4,3 +4,12 @@
 <p>住所: <%= @property.address %></p>
 <p>築年数: <%= @property.age %>年</p>
 <p>備考: <%= @property.remark %></p>
+<br>
+
+<% @number = 0 %>
+<% @property.nearest_stations.each do |nearest_station| %>
+  <h2>最寄駅<%= @number += 1 %></h2>
+  <p>路線名: <%= nearest_station.route_name %></p>
+  <p>駅名: <%= nearest_station.station_name %></p>
+  <p>徒歩分数: <%= nearest_station.on_foot_time %></p>
+<% end %>
