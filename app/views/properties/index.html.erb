@@ -18,8 +18,9 @@
     <td><%= property.remark %></td>
     <td><%= link_to '詳細', property_path(property.id) %></td>
     <td><%= link_to '編集', edit_property_path(property.id) %></td>
+    <td><%= link_to '削除', property_path(property.id), method: :delete ,data: { confirm: '本当に編集していいですか？' } %></td>
   </tr>
 <% end %>
 </table>
 
-<%= link_to '物件を登録する', new_property_path %>
+<%= link_to '物件情報を登録する', new_property_path %>
