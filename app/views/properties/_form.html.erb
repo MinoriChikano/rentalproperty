@@ -32,11 +32,9 @@
       <%= f.text_field :remark %>
     </div>
     
-    <p>最寄り駅
-    
-      <%= nearest_station.index + 1 %>
-    </p>
+    <% number = 0 %>
     <%= f.fields_for :nearest_stations do |s| %>
+      <h2>最寄駅<%= number += 1 %></h2>
       <div>
         <%= s.label :路線名 %>
         <%= s.text_field :route_name %>
@@ -47,7 +45,7 @@
       </div>
       <div>
         <%= s.label :徒歩分数 %>
-        <%= s.text_field :on_foot_time %>
+        <%= s.text_field :on_foot_time %>分
       </div>
     <% end %>
 
