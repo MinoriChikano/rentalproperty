@@ -12,23 +12,23 @@
     <% end %>
     
     <div class="@property_name">
-      <%= f.label :物件名 %>
+      <div><%= f.label :物件名 %></div>
       <%= f.text_field :property_name %>
     </div>
     <div class="property_rent">
-      <%= f.label :賃料 %>
+      <div><%= f.label :賃料 %></div>
       <%= f.text_field :rent %>円
     </div>
     <div class="property_address">
-      <%= f.label :住所 %>
+      <div><%= f.label :住所 %></div>
       <%= f.text_field :address %>
     </div> 
     <div class="property_age">
-      <%= f.label :築年数 %>
+      <div><%= f.label :築年数 %></div>
       <%= f.text_field :age %>年
     </div>
     <div class="property_remark">
-      <%= f.label :備考 %>
+      <div><%= f.label :備考 %></div>
       <%= f.text_field :remark %>
     </div>
     
@@ -36,15 +36,15 @@
     <%= f.fields_for :nearest_stations do |s| %>
       <h2>最寄駅<%= number += 1 %></h2>
       <div>
-        <%= s.label :路線名 %>
+        <div><%= s.label :路線名 %></div>
         <%= s.text_field :route_name %>
       </div>
       <div>
-        <%= s.label :駅名 %>
+        <div><%= s.label :駅名 %></div>
         <%= s.text_field :station_name %>
       </div>
       <div>
-        <%= s.label :徒歩分数 %>
+        <div><%= s.label :徒歩分数 %></div>
         <%= s.text_field :on_foot_time %>分
       </div>
     <% end %>
