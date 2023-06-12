@@ -12,3 +12,6 @@
   <p>駅名: <%= nearest_station.station_name %></p>
   <p>徒歩分数: <%= nearest_station.on_foot_time %></p>
 <% end %>
+
+<%= link_to '戻る', properties_path %>
+<%= link_to '編集', edit_property_path %>
